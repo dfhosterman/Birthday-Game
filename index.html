@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clue Quest</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="phone-card">
+      <header class="game-header">
+        <div>
+          <p class="eyebrow">Mobile clue game</p>
+          <h1 id="gameTitle">Clue Quest</h1>
+        </div>
+        <button id="resetButton" class="ghost-button" type="button">Reset</button>
+      </header>
+
+      <div class="progress-wrap" aria-label="Game progress">
+        <div class="progress-text">
+          <span id="stepLabel">Step 1 of 5</span>
+          <span id="percentLabel">0%</span>
+        </div>
+        <div class="progress-bar">
+          <div id="progressFill" class="progress-fill"></div>
+        </div>
+      </div>
+
+      <section id="chatWindow" class="chat-window" aria-live="polite"></section>
+
+      <form id="answerForm" class="answer-form">
+        <input
+          id="answerInput"
+          type="text"
+          autocomplete="off"
+          placeholder="Type your answer..."
+          aria-label="Answer"
+        />
+        <button type="submit">Send</button>
+      </form>
+
+      <div class="action-row">
+        <button id="hintButton" class="secondary-button" type="button">Get hint</button>
+        <button id="skipButton" class="secondary-button danger" type="button">Host skip</button>
+      </div>
+
+      <p class="small-note">
+        Tip: edit the clues, accepted answers, and hints in <strong>script.js</strong>.
+      </p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
